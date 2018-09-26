@@ -1,0 +1,172 @@
+{
+	"info": {
+		"name": "TimeWorks",
+		"_postman_id": "2551b386-f0a4-cd51-3762-be7b7ed50f65",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Projects",
+			"description": "",
+			"item": [
+				{
+					"name": "localhost:9999/projects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:9999/projects",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"projects"
+							]
+						},
+						"description": "get all projects\n"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:9999/projects/1/developers/add",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"developer3\",\n    \"timeWorks\": []\n\t\n}"
+						},
+						"url": {
+							"raw": "localhost:9999/projects/1/developers/add",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"projects",
+								"1",
+								"developers",
+								"add"
+							]
+						},
+						"description": "add developer to the project"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:9999/projects/1/developers/developer1/charge",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"timeOnProject\": \"05:00:00\"\n}\n       "
+						},
+						"url": {
+							"raw": "localhost:9999/projects/1/developers/developer1/charge",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"projects",
+								"1",
+								"developers",
+								"developer1",
+								"charge"
+							]
+						},
+						"description": "charge project"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:9999/projects/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:9999/projects/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"projects",
+								"1"
+							]
+						},
+						"description": "delete project that exists"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:9999/projects/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "localhost:9999/projects/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"projects",
+								"1"
+							]
+						},
+						"description": "get project"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reports",
+			"description": "",
+			"item": [
+				{
+					"name": "http://localhost:9999/reports/projects/1/developers/developer1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:9999/reports/projects/1/developers/developer1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"reports",
+								"projects",
+								"1",
+								"developers",
+								"developer1"
+							]
+						},
+						"description": "report service"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
