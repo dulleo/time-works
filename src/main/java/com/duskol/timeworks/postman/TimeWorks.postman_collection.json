@@ -31,7 +31,7 @@
 					"response": []
 				},
 				{
-					"name": "localhost:9999/projects/1/developers/add",
+					"name": "localhost:9999/projects/1/developers",
 					"request": {
 						"method": "PUT",
 						"header": [
@@ -42,10 +42,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"developer3\",\n    \"timeWorks\": []\n\t\n}"
+							"raw": "{\n    \"username\": \"developer3\",\n    \"timeWorks\": []\n}"
 						},
 						"url": {
-							"raw": "localhost:9999/projects/1/developers/add",
+							"raw": "localhost:9999/projects/1/developers",
 							"host": [
 								"localhost"
 							],
@@ -53,8 +53,7 @@
 							"path": [
 								"projects",
 								"1",
-								"developers",
-								"add"
+								"developers"
 							]
 						},
 						"description": "add developer to the project"
@@ -62,7 +61,7 @@
 					"response": []
 				},
 				{
-					"name": "localhost:9999/projects/1/developers/developer1/charge",
+					"name": "localhost:9999/projects/1/developers/developer1",
 					"request": {
 						"method": "PUT",
 						"header": [
@@ -73,10 +72,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"timeOnProject\": \"05:00:00\"\n}\n       "
+							"raw": "{\n   \"dateOfCharge\": \"26-09-2018\",\n   \"hoursOnProject\": \"05:00:00\"\n}\n       "
 						},
 						"url": {
-							"raw": "localhost:9999/projects/1/developers/developer1/charge",
+							"raw": "localhost:9999/projects/1/developers/developer1",
 							"host": [
 								"localhost"
 							],
@@ -85,8 +84,7 @@
 								"projects",
 								"1",
 								"developers",
-								"developer1",
-								"charge"
+								"developer1"
 							]
 						},
 						"description": "charge project"
