@@ -42,14 +42,14 @@ public class ProjectController {
         return projectService.getProject(id);
     }
 
-    @PutMapping("/{id}/developers/add")
+    @PutMapping("/{id}/developers")
     @ResponseStatus(HttpStatus.OK)
     public Mono<Project> addDeveloperToProject(@PathVariable @NotNull String id, @RequestBody @Valid Developer developer) {
         log.info("add developer to the project called...");
         return projectService.addDeveloperToProject(id, developer);
     }
 
-    @PutMapping("/{id}/developers/{username}/charge")
+    @PutMapping("/{id}/developers/{username}")
     @ResponseStatus(HttpStatus.OK)
     public Mono<Project> chargeProject(@PathVariable @NotNull String id,
                                        @PathVariable @NotNull String username,
